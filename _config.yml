@@ -42,7 +42,7 @@ theme_settings:
 
   # Scripts
   google_analytics: "UA-117105955-1"
-  disqus_shortname:
+  disqus_shortname: "clapwatermelon-github-io"
   katex: true # Enable if using math markup
   search: false # Enable the search feature
 

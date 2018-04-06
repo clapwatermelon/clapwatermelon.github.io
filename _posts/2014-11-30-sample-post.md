@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Sample post
 tags: [test, sample]
 ---

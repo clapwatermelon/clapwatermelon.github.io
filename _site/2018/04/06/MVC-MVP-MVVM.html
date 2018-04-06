@@ -3,7 +3,7 @@
   <head>
 	<meta charset="utf-8">
 	<title>MVC, MVP, MVVM | clapwatermelon</title>
-	<meta name="description" content="MVC(Model-View-Controller)">
+	<meta name="description" content="디자인 패턴이란?소프트웨어 디자인에서 공통적으로 발생하는 문제를 다루는 보편적이고 반복해서 사용할 수 있는 방법. 이는 다양한 상황에서 사용될 수 있는, 문제를 해결하는 방법에 대한 설명이나 템플릿이다.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSS -->
@@ -170,9 +170,26 @@
       
     </p>
   </header>
-  <section class="post-content"><p><strong>MVC(Model-View-Controller)</strong>
-<img src="/assets/img/MVC.png" alt="MVC" /></p>
+  <section class="post-content"><p>디자인 패턴이란?
+소프트웨어 디자인에서 공통적으로 발생하는 문제를 다루는 보편적이고 반복해서 사용할 수 있는 방법. 이는 다양한 상황에서 사용될 수 있는, 문제를 해결하는 방법에 대한 설명이나 템플릿이다.</p>
 
+<p>MVC, MVP, MVVM 패턴과 같은 프레임워크가 나오게 된 궁극적인 이유는?
+<strong>각 계층을 분리</strong>시킴으로써 <strong>코드의 재활용성을 높이고 불필요한 중복을 막기위해</strong>
+Model과View의 의존성을 어떻게 제어하느냐에 따라 각 패턴이 분류된다.</p>
+
+<h2 id="mvcmodel-view-controller">MVC(Model-View-Controller)</h2>
+<hr />
+<p><img src="/assets/img/MVC.png" alt="MVC" /></p>
+
+<blockquote>
+  <p>모든 입력은 Controller로 들어와 처리된다 -&gt; 입력이 Controller로 들어오면 Controller는 입력에 해당하는 Model을 업데이트한다 -&gt; Model은 해당 데이터를 보여줄 View를 선택하여 보여준다.</p>
+</blockquote>
+
+<p>Model: 애플리케이션과 관련된 데이터를 캡슐호하고, 해당 데이터를 조작하고 처리하는 로직과 계산을 하는 부분</p>
+
+<p>View: 애플리케이션 내에서 사용자가 볼 수있는 부분(화면). 사용자 동작에 응답할 수있다.</p>
+
+<p>Controller: 하나 이상의 애플리케이션 뷰 객체와 하나 이상의 모델 객체 사이의 코디네이터 또는 중개자 역할을 하는 부분. 뷰로 하여금 모델 객체의 변경사항을 인지하거나, 그 반대의 경우가 가능하도록 하는 매개체. 다른 객체들의 life cycle을 관리하기도 한다.</p>
 </section>
   
 <footer>

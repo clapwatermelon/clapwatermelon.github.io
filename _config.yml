@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: ""
-url: "http://clapwatermelon.github.io/"
+url: "https://clapwatermelon.github.io/"
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:

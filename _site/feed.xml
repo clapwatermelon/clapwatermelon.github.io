@@ -5,7 +5,7 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/</link>
     <description>A website with blog posts and pages</description>
-    <pubDate>Fri, 06 Apr 2018 22:47:07 +0900</pubDate>
+    <pubDate>Fri, 06 Apr 2018 23:12:09 +0900</pubDate>
     
       <item>
         <title>Operating Systems 1 - Computer Organization</title>
@@ -204,12 +204,13 @@ Reasons for its existence:&lt;/p&gt;
         <title>MVC, MVP, MVVM</title>
         <link>/2018/04/06/MVC-MVP-MVVM.html</link>
         <guid isPermaLink="true">/2018/04/06/MVC-MVP-MVVM.html</guid>
-        <description>&lt;p&gt;디자인 패턴이란?
-소프트웨어 디자인에서 공통적으로 발생하는 문제를 다루는 보편적이고 반복해서 사용할 수 있는 방법. 이는 다양한 상황에서 사용될 수 있는, 문제를 해결하는 방법에 대한 설명이나 템플릿이다.&lt;/p&gt;
+        <description>&lt;h3 id=&quot;디자인-패턴이란&quot;&gt;디자인 패턴이란?&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;소프트웨어 디자인에서 공통적으로 발생하는 문제를 다루는 보편적이고 반복해서 사용할 수 있는 방법. 이는 다양한 상황에서 사용될 수 있는, 문제를 해결하는 방법에 대한 설명이나 템플릿이다.&lt;/p&gt;
 
-&lt;p&gt;MVC, MVP, MVVM 패턴과 같은 프레임워크가 나오게 된 궁극적인 이유는?
-&lt;strong&gt;각 계층을 분리&lt;/strong&gt;시킴으로써 &lt;strong&gt;코드의 재활용성을 높이고 불필요한 중복을 막기위해&lt;/strong&gt;
-Model과View의 의존성을 어떻게 제어하느냐에 따라 각 패턴이 분류된다.&lt;/p&gt;
+&lt;p&gt;MVC, MVP, MVVM 패턴과 같은 프레임워크가 나오게 된 궁극적인 이유는?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;각 계층을 분리&lt;/strong&gt;시킴으로써 &lt;strong&gt;코드의 재활용성을 높이고 불필요한 중복을 막기위해&lt;/strong&gt; 각 패턴들은 Model과 View의 의존성을 어떻게 제어하느냐에 따라 분류된다.&lt;/p&gt;
 
 &lt;h2 id=&quot;mvcmodel-view-controller&quot;&gt;MVC(Model-View-Controller)&lt;/h2&gt;
 &lt;hr /&gt;
@@ -219,7 +220,7 @@ Model과View의 의존성을 어떻게 제어하느냐에 따라 각 패턴이 �
   &lt;p&gt;모든 입력은 Controller로 들어와 처리된다 -&amp;gt; 입력이 Controller로 들어오면 Controller는 입력에 해당하는 Model을 업데이트한다 -&amp;gt; Model은 해당 데이터를 보여줄 View를 선택하여 보여준다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Model: 애플리케이션과 관련된 데이터를 캡슐호하고, 해당 데이터를 조작하고 처리하는 로직과 계산을 하는 부분&lt;/p&gt;
+&lt;p&gt;Model: 애플리케이션과 관련된 데이터를 캡슐화하고, 해당 데이터를 조작하고 처리하는 로직과 계산을 하는 부분&lt;/p&gt;
 
 &lt;p&gt;View: 애플리케이션 내에서 사용자가 볼 수있는 부분(화면). 사용자 동작에 응답할 수있다.&lt;/p&gt;
 

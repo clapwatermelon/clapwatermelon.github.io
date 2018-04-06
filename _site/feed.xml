@@ -5,7 +5,115 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     <link>http://localhost:4000/</link>
     <description>A website with blog posts and pages</description>
-    <pubDate>Fri, 06 Apr 2018 23:38:44 +0900</pubDate>
+    <pubDate>Sat, 07 Apr 2018 01:25:01 +0900</pubDate>
+    
+      <item>
+        <title>Operating Systems 3 - Process</title>
+        <link>/2018/04/07/Operating-Systems3.html</link>
+        <guid isPermaLink="true">/2018/04/07/Operating-Systems3.html</guid>
+        <description>&lt;h2 id=&quot;process&quot;&gt;Process?&lt;/h2&gt;
+&lt;p&gt;메모리에 올라간 순간부터 프로세스라고 부른다.&lt;/p&gt;
+&lt;h3 id=&quot;multi-programming&quot;&gt;Multi-programming&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;Run multiple-programs with &lt;strong&gt;timesharing&lt;/strong&gt;
+Run each program in turn until &lt;strong&gt;timeout&lt;/strong&gt; or &lt;strong&gt;I/O event&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;옛날 컴퓨터라고 볼 수 있다&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;multitasking&quot;&gt;Multitasking&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;Multiprogramming with frequent job switching
+CPU scheduling&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;빨리빨리해서 동시에 시행되는 것처럼 하는 것&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;multithreading&quot;&gt;Multithreading&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;A process with multiple threads&lt;/p&gt;
+
+&lt;h2 id=&quot;process-control-blockpcb&quot;&gt;Process Control Block(PCB)&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;프로세스 제어 블록(PCB)는 특정한 프로세스를 관리할 필요가 있는 정보를 포함하는 운영체제 커널의 자료구조. &lt;strong&gt;각 프로세스가 생성될 때마다 고유의 PCB&lt;/strong&gt;가 생성되고 프로세스가 완료되면 PCB는 제거된다.&lt;/p&gt;
+&lt;h3 id=&quot;pcb-contains&quot;&gt;PCB contains&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Process state&lt;/li&gt;
+  &lt;li&gt;Program identifier number (PID)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://clapwatermelon.github.io/2018/04/06/Operating-Systems.html&quot;&gt;Program counter&lt;/a&gt; (PC)&lt;/li&gt;
+  &lt;li&gt;CPU registers&lt;/li&gt;
+  &lt;li&gt;CPU scheduling information&lt;/li&gt;
+  &lt;li&gt;Memory-management information&lt;/li&gt;
+  &lt;li&gt;Accounting information&lt;/li&gt;
+  &lt;li&gt;I/O status information&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;프로세스는 CPU가 처리하던 작업의 내용들을 자신의 PCB에 저장하고 다시 CPU를 점유하여 작업을 수행해야 할 때 PCB로부터 해당 정보들을 CPU에서 넘겨와 계속해서 하던 작업을 진행할 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;context-switch&quot;&gt;Context Switch&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post_img/contextSwitch.png&quot; alt=&quot;contextSwitch&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;운영체제는 멀티태스킹을 위해서 여러 프로세스를 번갈아 가면서 수행한다. 이때, 현재 수행중인 프로세스를 중단하고 새로운 프로세스로 전환하는 과정을 &lt;strong&gt;context switch&lt;/strong&gt; 라고 한다. 이 과정에서 PCB를 활용한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Sat, 07 Apr 2018 00:00:00 +0900</pubDate>
+      </item>
+    
+      <item>
+        <title>Operating Systems 2 - Microkernel VS Monolithic kernel</title>
+        <link>/2018/04/06/Operating-Systems2.html</link>
+        <guid isPermaLink="true">/2018/04/06/Operating-Systems2.html</guid>
+        <description>&lt;h2 id=&quot;microkernel&quot;&gt;Microkernel?&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;Moves as much from the kernel into “user” space&lt;br /&gt;
+Communication takes place between user modules using message passing&lt;/p&gt;
+
+&lt;p&gt;Benefits:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Easier to extend a microkernel&lt;/li&gt;
+  &lt;li&gt;Easier to port the operating system to new architectures&lt;/li&gt;
+  &lt;li&gt;More &lt;strong&gt;reliable&lt;/strong&gt; (less code is running in kernel mode)&lt;/li&gt;
+  &lt;li&gt;More &lt;strong&gt;secure&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Detriments:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Performance overhead of user space to kernel space communication&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;커널의 크기가 작으므로 커널과 일부 서비스만으로 작은 운영체제를 구성하여 임베디드 시스템에 사용가능. 즉, 컴포넌트 기반 운영체제에 더욱 가깝다고 할 수 있다. 커널의 핵심적인 기능 외에 모두 프로세스 형태로 제공되므로 파일시스템이나 입출력 처리가 많을수록 서로간의 메세지를 주고 받아야하므로 속도가 느려질 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;monolithic-kernel&quot;&gt;Monolithic kernel?&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Modules&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Most modern operating systems implement kernel modules&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Uses &lt;strong&gt;object-oriented&lt;/strong&gt; approach&lt;/li&gt;
+  &lt;li&gt;Each core &lt;strong&gt;componet is separate&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Each talks to the others over known interfaces&lt;/li&gt;
+  &lt;li&gt;Each is &lt;strong&gt;loadable as needed within the kernel&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Overall, similar to layers but with more flexible&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;커널이 많은 일을 한다. 가장 확장성이 떨어지는 방법이지만 성능이 좋아서 리눅스에서도 사용되고 있으며 리눅스는 확장성을 보완하기 위해서 module을 사용한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Microkernel과 Monolithic kernel을 예를 들자면   &lt;br /&gt;
+정부는 작아야한다! 공화당스러운건 &lt;strong&gt;Microkernel&lt;/strong&gt; (kernel이 작으므로)   &lt;br /&gt;
+정부는 커야한다! 민주당스러운건 &lt;strong&gt;Monolithic kernel&lt;/strong&gt; (kernel이 많은 일을 해야하므로)&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 06 Apr 2018 00:00:00 +0900</pubDate>
+      </item>
     
       <item>
         <title>Operating Systems 1 - Computer Organization</title>
@@ -43,7 +151,7 @@
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;이전의 폰노이만 머신에서는 프로그램은 하드웨어에, 데이터는 메모리에 따로 존재했었다면 폰 노이만 머신에서는 프로그램과 데이터가 메모리 안에 들어감으로써 프로그램을 좀 더 쉽게 할 수 있게 되었다.&lt;/p&gt;
+  &lt;p&gt;이전의 폰 노이만 머신에서는 프로그램은 하드웨어에, 데이터는 메모리에 따로 존재했었다면 폰 노이만 머신에서는 프로그램과 데이터가 메모리 안에 들어감으로써 프로그램을 좀 더 쉽게 할 수 있게 되었다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/post_img/VNA.png&quot; alt=&quot;VNA&quot; title=&quot;Von Neumann Architecture&quot; /&gt;&lt;/p&gt;

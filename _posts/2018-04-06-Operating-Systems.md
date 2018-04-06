@@ -22,7 +22,7 @@ tags: [OperatingSystems, OS]
 	- Called stored-program architecture
 	- Good: re-program easily
 
-> 이전의 폰노이만 머신에서는 프로그램은 하드웨어에, 데이터는 메모리에 따로 존재했었다면 폰 노이만 머신에서는 프로그램과 데이터가 메모리 안에 들어감으로써 프로그램을 좀 더 쉽게 할 수 있게 되었다.
+> 이전의 폰 노이만 머신에서는 프로그램은 하드웨어에, 데이터는 메모리에 따로 존재했었다면 폰 노이만 머신에서는 프로그램과 데이터가 메모리 안에 들어감으로써 프로그램을 좀 더 쉽게 할 수 있게 되었다.
 
 ![VNA](/assets/post_img/VNA.png "Von Neumann Architecture")
 

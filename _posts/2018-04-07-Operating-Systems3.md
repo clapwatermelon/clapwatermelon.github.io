@@ -7,13 +7,13 @@ tags: [multitasking, multiprogramming, multithreading, process, PCB, Process Con
 메모리에 올라간 순간부터 프로세스라고 부른다.        
 ### Multi-programming
 ***
-Run multiple-programs with **timesharing**
+Run multiple-programs with **timesharing**       
 Run each program in turn until **timeout** or **I/O event**    
 > 옛날 컴퓨터라고 볼 수 있다
 
 ### Multitasking
 ***
-Multiprogramming with frequent job switching
+Multiprogramming with frequent job switching       
 CPU scheduling     
 > 빨리빨리해서 동시에 시행되는 것처럼 하는 것     
 

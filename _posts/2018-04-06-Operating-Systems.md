@@ -20,7 +20,7 @@ tags: [OperatingSystems, OS]
 	- General purpose computer
 	- **Program in memory**, Data in memory
 	- Called stored-program architecture
-	- Good: re=program easily
+	- Good: re-program easily
 
 > 이전의 폰노이만 머신에서는 프로그램은 하드웨어에, 데이터는 메모리에 따로 존재했었다면 폰 노이만 머신에서는 프로그램과 데이터가 메모리 안에 들어감으로써 프로그램을 좀 더 쉽게 할 수 있게 되었다.
 
@@ -40,6 +40,7 @@ tags: [OperatingSystems, OS]
 ***
 Problem: Von Neumann Bottleneck = Bus
 - Too much to move over bus: slow (좋은 CPU 여도 Bus도 좋아야 빠르다)
+
 Solution: Cache
 - Temporary fast memory with recent data/program
 - Code optimization
@@ -50,6 +51,7 @@ Solution: Cache
 ***
 Problem: Program & Data in same memory
 - A program can mess-up instructions in memory
+
 Solution: Harvard Architecture
 - Separate data and program memory
 - Memory restriction: Prevent accessing memory outside data
@@ -62,6 +64,7 @@ Solution: Harvard Architecture
 ***
 Problem: Program & Data over ther same bus
 - Different fetch rate, slow bus
+
 Solution: Harvard Architecture
 - Seperate data and program bus
 
@@ -69,7 +72,8 @@ Solution: Harvard Architecture
 
 ### How a computer can do many things simultaneously?
 ***
-Interrupts
+Interrupts!! 
+컴퓨터가 동시에 여러가지 일을 할 수 있도록 해주는 기능
 
 ### Interrupts
 ***
@@ -87,6 +91,7 @@ Major constraints in memory
 - amount
 - speed
 - expense
+
 Memory must be able to keep up with the processor
 Cost of memory must be reasonable in relationship to the other componets
 
@@ -121,8 +126,9 @@ How to exploit it:
 
 ### Cache memory
 ***
-Invisible to the processors, programmer, OS
-Interacts with other memory management hardware
+Invisible to the processors, programmer, OS  
+Interacts with other memory management hardware  
+
 Reasons for its existence:
 - Processor must access memory at least once per instruction cycle
 - Processor execution is limited by memory cycle time
@@ -137,6 +143,5 @@ Reasons for its existence:
 ***
 캐시에 새로운 Block을 로드할 때 어떤 Block을 대체할 것인지에 대한 알고리즘
 
-Choose which block to replace when a new block is to be loaded into the cahe
-
-Least Recently Used(LRU) Algorithm: 가장 최근에 덜 사용 된 것을 대체시키는 알고리즘
+- Choose which block to replace when a new block is to be loaded into the cahe
+- Least Recently Used(LRU) Algorithm: 가장 최근에 덜 사용 된 것을 대체시키는 알고리즘

@@ -4,6 +4,7 @@ title: Operating Systems 3 - Process
 tags: [multitasking, multiprogramming, multithreading, process, PCB, Process Controll Block, Context Switch, OS, OperatingSystems]
 ---
 ## Process?
+**프로그램 실행 단위** by [jinjoo choi](https://jinjoochoi.github.io/)       
 메모리에 올라간 순간부터 프로세스라고 부른다.        
 ### Multi-programming
 ***

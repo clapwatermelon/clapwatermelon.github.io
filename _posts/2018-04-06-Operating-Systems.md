@@ -117,7 +117,8 @@ Outboard Storage:
 
 ### Principle of Locality
 ***
-컴퓨터 프로그램의 메모리 접근 패턴이 시 공간적으로 근접한 모습을 보이는 경향이 크다 이것을 근접성의 원칙이라고 한다.
+컴퓨터 프로그램의 메모리 접근 패턴이 시 공간적으로 근접한 모습을 보이는 경향이 크다 이것을 근접성의 원칙이라고 한다.         
+
 Fact: Memory references by the processor tend to cluster in time and space
 
 How to exploit it:

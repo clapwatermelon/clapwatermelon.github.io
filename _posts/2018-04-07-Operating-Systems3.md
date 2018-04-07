@@ -37,7 +37,7 @@ A process with multiple threads
 
 > 프로세스는 CPU가 처리하던 작업의 내용들을 자신의 PCB에 저장하고 다시 CPU를 점유하여 작업을 수행해야 할 때 PCB로부터 해당 정보들을 CPU에서 넘겨와 계속해서 하던 작업을 진행할 수 있다.
 
-### Context Switch
+## Context Switch
 ***
 ![contextSwitch](/assets/post_img/contextSwitch.png)
 
@@ -54,4 +54,14 @@ Context: 어떠한 순간에 CPU Register안에 들어있는 값들의 집합과
 
 ## Dispatcher module
 ***
-CPU 의 제어를 스케줄러가 선택한 프로세스에게 넘겨주는 모듈. 실제로 CPU 를 할당하는 역할
+CPU 의 제어를 스케줄러가 선택한 프로세스에게 넘겨주는 모듈. 실제로 CPU 를 할당하는 역할        
+
+## Five-state Process Model
+***
+![fivestate](/assets/post_img/fivestate.png)
+
+- **New**: **프로세스가 생성'중'**. 프로세스가 생성되었지만 아직 OS 에 의해 승인받지 못한 상태     
+- **Ready**: **프로세스가 처리기에 할당되기를 기다림**. New 상태에서 admit된 상태. CPU 를 제외한 다른 자원이 준비완료. 보조기억장치에 있는 프로그램을 실행시켜 메모리에 로드된 상태. 이상태는 여러개의 프로세스가 존재할 수 있다. (CPU 를 할당받기를 기다림)    
+- **Running**: **명령어들이 실행중**. 프로세스가 CPU 를 할당받아 실제로 프로세스가 수행되고 있는 상태    
+- **Waiting**: **프로세스가 어떤 event 나 I/O 작업을 기다림**      
+- **Terminated**: **프로세스의 실행이 종료**. 프로세스의 실행이 와나료되고 할당된 CPU 를 반납   

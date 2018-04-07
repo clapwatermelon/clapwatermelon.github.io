@@ -40,6 +40,18 @@ A process with multiple threads
 ### Context Switch
 ***
 ![contextSwitch](/assets/post_img/contextSwitch.png)
+
+Context: 어떠한 순간에 CPU Register안에 들어있는 값들의 집합과 기타 정보들.    
+
 > 운영체제는 멀티태스킹을 위해서 여러 프로세스를 번갈아가면서 수행한다. 이때, 현재 수행중인 프로세스를 중단하고 새로운 프로세스로 전환하는 과정을 **context switch** 라고 한다. 이 과정에서 PCB를 활용한다.
 
+예를 들자면 Ready 상태인 A 프로세스와 Running 상태인 B 프로세스가 있고 interrupt 요청에 의해 서로 상태가 전이된다고 가정한다면 이떄, A 프로세스가 Running 상태로 전이되고 B 프로세스가 Ready 상태가 될 때 A 프로세스의 상태 또는 레지스터 값 등등 PCB에 저장이되고 A 프로세스의 정보를 PCB에서 CPU로 적재시킨다.       
 
+여기서 CPU를 다른 프로세스로 교환하려면 이전의 프로세스의 상태를 저장하고 새로운 프로세스와 저장된 상태를 복구하는 작업이 필요한데 이 과정을 **Context switch** 라고 말한다.       
+
+> Context switching 이 일어나는 동안 CPU는 아무런 일을 하지 못하며, CPU에 많은 부하를 가져다 준다. 이는 멀티 프로세스 운영체제의 단점이다. 이러한 Context switching 의 시간은 레지스터의 수나 메모리의 속도 등에 좌우된다.      
+현재 컴퓨터는 switching 을 하는데 몇 백 ns 밖에 걸리지 않는다.
+
+## Dispatcher module
+***
+CPU 의 제어를 스케줄러가 선택한 프로세스에게 넘겨주는 모듈. 실제로 CPU 를 할당하는 역할

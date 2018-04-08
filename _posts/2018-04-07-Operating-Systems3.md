@@ -4,23 +4,24 @@ title: Operating Systems 3 - Process
 tags: [multitasking, multiprogramming, multithreading, process, PCB, Process Controll Block, Context Switch, OS, OperatingSystems]
 ---
 ## Process?
-**프로그램 실행 단위** by [jinjoo choi](https://jinjoochoi.github.io/)       
+**프로그램 실행 단위**                
 메모리에 올라간 순간부터 프로세스라고 부른다.        
 ### Multi-programming
 ***
 Run multiple-programs with **timesharing**       
 Run each program in turn until **timeout** or **I/O event**    
-> 옛날 컴퓨터라고 볼 수 있다
+> 멀티프로그래밍은 프로세서의 자원낭비를 최소화 하기 위해 낭비되는 시간을 다른프로그램 수행에 쓰게 하여 (timesharing) 하나의 프로세서에서 여러 프로그램을 교대로 수행할 수 있게 하는 것
 
 ### Multitasking
 ***
 Multiprogramming with frequent job switching       
 CPU scheduling     
-> 빨리빨리해서 동시에 시행되는 것처럼 하는 것     
+> 빨리 빨리처리함으로써 동시에 시행되는 것처럼 하는 것. 멀티프로그래밍과 다른 점은 멀티프로그래밍이 낭비되는 자원을 최소화하기 위해 교대로 실행하였다면, 멀티태스킹은 **정해진 시간 동안** 교대로 task 를 수행하는 것.
 
 ### Multithreading
 ***
-A process with multiple threads     
+A process with multiple threads       
+> thread는 프로세스 내에서 생성되는 하나의 실행 주체이다. 한 프로세스 내에서 여러개의 thread 가 동시에 생성이 가능하다. 같은 프로세스에 존재하는 다른 thread 들과 OS 의 자원을 공유로 code,file, data 등을 공유한다.
 
 ## Process Control Block(PCB)
 ***

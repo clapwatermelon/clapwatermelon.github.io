@@ -7,23 +7,28 @@ tags: [swift, UIButton, UILabel, UISlider]
 ## UIButton, UILabel, UISlider
 ***
 ## UIButton
+***
 > UIButton 클래스는 사용자의 상호 작용(터치/탭 등의 이벤트)에 반응해 미리 지정된 코드를 실행하는 컨트롤 요소입니다.       
 
 ![UIButton](https://docs-assets.developer.apple.com/published/77caf4ed6d/uibutton_intro_774acff3-5a9e-4e3a-b4cb-52b4eb905165.png)         
 
 ### 버튼 생성 3단계
+***
 1. 버튼을 생성하고 버튼의 유형을 선택하세요.     
 2. 버튼을 나타내기 위한 문자(타이틀)를 입력하거나, 이미지를 설정한 뒤 크기를 조정하세요.      
 3. 버튼에 특정 이벤트가 발생할 때 작동할 하나 이상의 메서드를 연결하세요.      
 
 ### 사용자 상호작용에 반응하기
+***
 사용자가 버튼을 터치하면 버튼에 연결된 액션 메서드가 호출되어 원하는 작업이 실행됩니다.     
 
 ### 버튼과 메서드 연결하는 방법
-1. <code>addTarget(_:action:for:)</code> 메서드 사용
-2. 인터페이스 빌더에서 연결 (<code>@IBAction</code>)
+***
+- <code>addTarget(_:action:for:)</code> 메서드 사용
+- 인터페이스 빌더에서 연결 (<code>@IBAction</code>)
 
 ### 버튼과 연결되는 메서드 형식
+***
 버튼을 탭 했을 때 필요한 정보에 따라 아래 세 가지 중 한 가지를 선택해 사용하세요.
 ```swift
 func doSomething()    
@@ -32,6 +37,7 @@ func doSomething(sender: UIButton, forEvent evet: UIEvent)
 ```     
 
 ### 버튼의 상태
+***
 - 버튼의 상태는 다섯가지로 표현합니다.
 	* default, highlighted, focused, selected, disabled
 	* 버튼의 상태는 조합된 상태일 수 있습니다.
@@ -43,6 +49,7 @@ func doSomething(sender: UIButton, forEvent evet: UIEvent)
 	* [예] disabled 버튼은 일반적으로 흐리게 표시되며 사용자가 탭 해도 highlighted 되지 않습니다.    
 
 ### 버튼의 주요 프로퍼티    
+***
 버튼의 프로퍼티 값을 설정하는 방식에는 코드를 이용하는 방법과 스토리보드의 인스펙터를 이용한 방법이 있습니다.    
 
 - enum UIButtonType: 버튼의 유형
@@ -55,6 +62,7 @@ func doSomething(sender: UIButton, forEvent evet: UIEvent)
 - var tintColor: UIColor!: 버튼 타이틀과 이미지의 [틴트 컬러](https://developer.apple.com/documentation/uikit/uiview/1622467-tintcolor)    
 
 ### 버튼의 주요 메서드    
+***
 ```swift
 // 특정 상태의 버튼의 문자열 설정    
 func setTitle(String?, for: UIControlState)
@@ -80,18 +88,20 @@ func setTitleColor(UIColor?, for: UIControlState)
 // 특정 상태의 attributed 문자열 설정     
 func setAttributedTitle(NSAttributedString?, for: UIControlState)    
 ```     
-***
 ## UILabel   
+***
 > UILabel은 한 줄 또는 여러 줄의 텍스트를 보여주는 뷰로, UIButton 등의 컨트롤의 목적을 설명하기 위해 사용하는 경우가 많습니다.        
 
 ![lineBreakMode](https://docs-assets.developer.apple.com/published/bd418eb990/05f84a28-0b72-425b-9fed-ef1a14134a53.png)      
 
 ### 레이블 생성 3단계
+***
 1. 레이블을 생성하십시오.     
 2. 레이블이 표시할 문자열을 제공하십시오.    
 3. 레이블의 모양 및 특성을 설정하십시오.     
 
 ### 레이블 주요 프로퍼티
+***
 레이블의 프로퍼티에 접근해 나타내려는 문자의 내용, 색상, 폰트, 문자정렬방식, 라인 수 등을 조정할 수 있습니다.
 레이블의 프로퍼티의 값을 설정하는 방식에는 프로그래밍 방식과 스토리보드의 인스펙터를 이용한 방법이 있습니다.
 
@@ -121,25 +131,29 @@ func setAttributedTitle(NSAttributedString?, for: UIControlState)
 	* Truncate middle: 한 줄 레이블에 주로 적용되며, 중간 텍스트를 자르고 ...으로 표시합니다.
 	* Truncate tail: 한 줄 레이블에 주로 적용되며, 끝쪽 텍스트를 자르고 ...으로 표시합니다. 기본 설정 값입니다.
 
-***
 ## UISlider
+***
 > UISlider는 연속된 값 중에서 특정 값을 선택하는데 사용되는 컨트롤입니다.   
 
 ![UISlider](https://docs-assets.developer.apple.com/published/e0791617a4/14f9f16e-55c0-474a-ae62-f42ebf2cab33.png)    
 
 ### 슬라이더 생성 3단계
+***
 1. 슬라이더를 생성하고, 슬라이더가 나타내는 값의 범위를 지정하세요.    
 2. 적절한 색상과 이미지를 이용해 슬라이더의 모양을 구성하세요.    
 3. 하나 이상의 메서드를 슬라이더와 연결하세요.    
 
 ### 사용자 상호작용에 반응하기    
+***
 사용자가 슬라이더의 값을 변경하면 슬라이더에 연결된 메서드가 호출되어 원하는 작업이 실행됩니다. 기본적으로는 사용자가 슬라이더의 **Thumb**를 이동시키면 연속적으로 이벤트를 호출하지만, **isContinous** 프로퍼티값을 false로 설정하면 슬라이더의 Thumb에서 손을 떼는 동시에 이벤트를 호출합니다.
 
 ### 슬라이더와 메서드 연결하는 방법    
-1. <code>addTarget(_:action:for:)</code> 메서드 사용    
-2. 인터페이스 빌더에서 연결(<code>@IBAction</code>)
+***
+- <code>addTarget(_:action:for:)</code> 메서드 사용    
+- 인터페이스 빌더에서 연결(<code>@IBAction</code>)
 
 ### 슬라이더와 연결하는 메서드 형식    
+***
 슬라이더의 값을 변경했을 때 필요한 정보에 따라 아래 세 가지 중 한 가지를 선택하여 사용하세요.   
 ```swift
 func doSomething()     
@@ -148,6 +162,7 @@ func doSomething(sender: UISlider, forEvent event: UIEvent)
 ```        
 
 ### 슬라이더 주요 프로퍼티    
+***
 슬라이더의 프로퍼티 값을 설정하는 방식에는 프로그래밍 방식과, 스토리보드의 인스펙터를 이용한 방법이 있습니다.    
 - var minimumValue: Float, var maximumValue: Float: 슬라이더 양끝단의 값    
 - var value: Float: 슬라이더의 현재 값    
@@ -157,6 +172,7 @@ func doSomething(sender: UISlider, forEvent event: UIEvent)
 - var minimumTrackTintColor: UIColor?, var maximumTrackTintColor: UIColor?: thumb를 기준으로 앞쪽 트랙과 뒤쪽 트랙의 틴트 색상    
 
 ### 슬라이더 주요 메서드     
+***
 ```swift
 // 슬라이더의 현재 값 설정     
 func setValue(Float, animated: Bool)     

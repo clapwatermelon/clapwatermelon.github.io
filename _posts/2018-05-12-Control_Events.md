@@ -7,10 +7,10 @@ tags: [swift, control events]
 ## Control Events(컨트롤 이벤트)
 ***
 ### Relationship between Control Events and Actions(컨트롤 이벤트와 액션과의 관계)
-- UIKit에는 UIButton, UISwitch, UIStepper 등 UIControl을 상속받은 다양한 컨트롤 클래스가 있습니다. 그런 컨트롤 객체에 발생한 다양한 이벤트 종류를 특정 액션 메서드에 연결할 수 있습니다. 즉, 컨트롤 객체에서 특정 이벤트가 발생하면, 미리 지정해 둔 타겟의 액션을 호출하게 됩니다.
+> UIKit에는 UIButton, UISwitch, UIStepper 등 UIControl을 상속받은 다양한 컨트롤 클래스가 있습니다. 그런 컨트롤 객체에 발생한 다양한 이벤트 종류를 특정 액션 메서드에 연결할 수 있습니다. 즉, 컨트롤 객체에서 특정 이벤트가 발생하면, 미리 지정해 둔 타겟의 액션을 호출하게 됩니다.
 
 ### Types of Control Events(컨트롤 이벤트의 종류)
-- 컨트롤 이벤트는 'UIControlEvents'라는 타입으로 정의되어 있습니다.
+> 컨트롤 이벤트는 <code>UIControlEvents</code>라는 타입으로 정의되어 있습니다.
 
 **touchDown**     
 컨트롤을 터치했을 때 발생하는 이벤트

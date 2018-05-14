@@ -46,7 +46,7 @@ tags: [swift, autoLayout]
 ### 오토레이아웃 속성
 오토레이아웃의 속성은 정렬 사각형을 기반으로 합니다.     
 
-![autolayout](/image/autoLayout.png)   
+![autolayout](/assets/post_img/autoLayout.png)   
 
 - Width : 정렬 사각형의 너비
 - Height : 정렬 사각형의 높이
@@ -67,14 +67,14 @@ tags: [swift, autoLayout]
 	* 안전 영역은 iOS 11부터 사용할 수 있습니다.
 	* iOS 11 미만의 버전에서는 상/하단 레이아웃 가이드를 사용합니다.
 
-![safeArea](/image/safeArea.png)    
+![safeArea](/assets/post_img/safeArea.png)    
 
 안전 영역 레이아웃 가이드는 UIView클래스의 var safeAreaLayoutGuide: UILayoutGuide로 접근할 수 있습니다.     
 
 ### 제약(Constraint)    
 제약은 뷰 스스로 또는 뷰 사이의 관계를 속성을 통하여 정의합니다. 제약은 방정식으로 나타낼 수 있습니다.
 
-![constraints](/image/constraints.png)    
+![constraints](/assets/post_img/constraints.png)    
 - Item1 : 방정식에 있는 첫 번째 아이템(B View) 입니다. 첫 번째 아이템은 반드시 뷰 또는 레이아웃 가이드이어야 합니다.
 - Attribute1 : 첫번째 아이템에 대한 속성입니다. 이 경우, B View의 리딩입니다.
 - Multiplier : 속성 2에 곱해지는 값입니다. 이 경우 1.0 입니다.
@@ -92,7 +92,7 @@ tags: [swift, autoLayout]
 
 1. 콘텐츠 허깅 우선도(Content hugging priority) : 콘텐츠 고유 사이즈보다 뷰가 커지지 않도록 제한합니다. 다른 제약사항보다 우선도가 높으면 뷰가 콘텐츠 사이즈보다 커지지 않습니다.    
 2. 콘텐츠 축소 방지 우선도(Content compression resistance priority) : 콘텐츠 고유 사이즈보다 뷰가 작아지지 않도록 제한합니다. 다른 제약사항보다 우선도가 높으면 뷰가 콘텐츠 사이즈보다 작아지지 않습니다.    
-![contraintsPriorities](/image/constraintsPriority.png)    
+![contraintsPriorities](/assets/post_img/constraintsPriority.png)    
 
 ### 레이아웃 마진
 뷰에 콘텐츠 내용을 레이아웃할 때 사용하는 기본 간격(default spacing)입니다.    

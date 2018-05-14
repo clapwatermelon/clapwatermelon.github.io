@@ -14,7 +14,7 @@ tags: [swift, cocoa touch framework, cocoa touch]
 - '코코아' 또는 '코코아 터치'는 iOS 또는 macOS의 전반적인 기능을 활용해 애플리케이션을 제작할 때 사용하는 프레임워크입니다.    
 - '코코아 터치'는 핵심 프레임워크인 UIKit과 Foundation을 포함합니다.    
 
-![cocoaTouch](/image/cocoaTouch.png)    
+![cocoaTouch](/assets/post_img/cocoaTouch.png)    
 
 ## 관련 문서
 [Cocoa](https://en.wikipedia.org/wiki/Cocoa_(API))     

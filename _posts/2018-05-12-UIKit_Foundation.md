@@ -9,7 +9,8 @@ tags: [swift, UIKit, Foundation]
 UIKit 과 Foundation은 Cocoa Touch Framework에 포함되어있습니다.
 
 ## UIKit
-> UIKit은 iOS 애플리케이션의 사용자 인터페이스를 구현하고 이벤트를 관리하는 프레임워크입니다. UIKit은 iOS 애플리케이션 개발시 사용자에게 보여질 화면을 구성하고 사용자 액션에 대응에 관련된 다양한 요소를 포함합니다.    
+***
+UIKit은 iOS 애플리케이션의 사용자 인터페이스를 구현하고 이벤트를 관리하는 프레임워크입니다. UIKit은 iOS 애플리케이션 개발시 사용자에게 보여질 화면을 구성하고 사용자 액션에 대응에 관련된 다양한 요소를 포함합니다.    
 
 - UIKit 프레임워크는 제스처 처리, 애니메이션, 그림 그리기, 이미지 처리, 텍스트 처리 등 사용자 이벤트 처리를 위한 클래스를 포함합니다.     
 - 또한 테이블뷰, 슬라이더, 버튼, 텍스트 필드, 얼럿 창 등 애플리케이션의 화면을 구성하는 요소를 포함합니다.    
@@ -19,6 +20,7 @@ UIKit 과 Foundation은 Cocoa Touch Framework에 포함되어있습니다.
 UIKit 클래스 중 UIResponder에서 파생된 클래스나 사용자 인터페이스에 관련된 클래스는 애플리케이션의 메인 스레드(혹은 메인 디스패치 큐)에서만 사용하세요.   
 
 ### UIKit 기능별 요소
+***
 #### 사용자 인터페이스    
 화면에 내용을 표시하고 사용자 상호작용을 용이하게합니다. 뷰컨트롤러는 뷰와 인터페이스 구조를 관리하는 데 도움이됩니다.
 
@@ -43,11 +45,12 @@ UIKit에는 텍스트를 응용 프로그램에 쉽게 표시할 수있는 텍�
 - Text Storage: 텍스트 저장 공간을 관리하고 텍스트 레이아웃을 조정
 - Keyboards and Input: 시스템 키보드를 구성하거나 직접 키보드를 만들고 입력을 직접 처리 가능    
 
-#### ViewController를 생성하면 상단에 'import UIKit'가 기본적으로 명시되어있다. 왜 그럴까?
+### ViewController를 생성하면 상단에 'import UIKit'가 기본적으로 명시되어있다. 왜 그럴까?
 ***
 ViewController를 사용하여 UIKit 앱의 인터페이스를 관리한다. 즉, UIKit은 사용자 인터페이스에 사용되는 기능들이 포함되어있어 사용자 인터페이스를 관리하는 ViewController를 생성할때 UIKit가 기본으로 import 된다.    
 
 ## Foundation     
+***
 > Foundation은 iOS 애플리케이션의 운영체제 서비스와 기본 기능을 포함하는 프레임워크입니다. Foundation은 원시 데이터 타입(String, Int, Double), 컬렉션 타입(Array, Dictionary, Set) 및 운영체제 서비스를 사용해 애플리케이션의 기본적인 기능을 관리하는 프레임워크 입니다.    
 
 - Foundation 프레임워크는 데이터 타입, 날짜 및 시간 계산, 필터 및 정렬, 네트워킹 등의 기본 기능을 제공합니다.    
@@ -56,6 +59,7 @@ ViewController를 사용하여 UIKit 앱의 인터페이스를 관리한다. 즉
 > Foundation에서 제공하는 데이터 타입 및 컬렉션 타입의 대부분은 Objective-C 언어의 기능에서 지원하지 않는 것이기 때문에 언어기능을 보완하기 위한 구현이며, Swift에서는 이에 해당하는 데이터 타입과 기능 대부분을 [Swift 표준 라이브러리](https://developer.apple.com/documentation/swift)에서 제공합니다.     
 
 ### Foundation 기능별 요소
+***
 #### 기본    
 - Number, Data, String: 원시 데이터 타입 사용    
 - Collection: Array, Dictionary, Set 등과 같은 컬렉션 타입 사용    
@@ -79,7 +83,8 @@ ViewController를 사용하여 UIKit 앱의 인터페이스를 관리한다. 즉
 - URL Loading System: 표준 인터넷 프로토콜을 통해 URL과 상호작용하고 서버와 통신하는 작업   
 - Bonjour: 로컬 네트워크를 위한 작업   
 
-#### 어떤 파일을 생성하면 import Foundation이 기본적으로 명시되어있을까?
+### 어떤 파일을 생성하면 import Foundation이 기본적으로 명시되어있을까?
+***
 원시 데이터 타입, 컬렉션 타입을 사용하기 위해 기본적인 swift파일을 생성하면 Foundation이 import되는 것을 확인 할 수있다. ViewController에서도 원시 데이터 타입이나 컬렉션 타입을 사용하는데 UIKit만 import되어있다. 이 이유는 UIKit를 import 하게되면 Foundation은 backstage에서 이미 가져오기 때문이다.
 
 

@@ -1,14 +1,8 @@
 ---
 layout: post
 title: Project 1 - MusicPlayer
-tags: [AVFoundation, AVKit, AVPlayer, AVAudioPlayer ]
+tags: [AVFoundation, AVKit, AVPlayer, AVAudioPlayer]
 ---
-
-
-
-
-
-## Project 1 - MusicPlayer
 
 >  BoostCourse iOS 과정을 들으며 공부한 것과 배운 것을 토대로 정리하고 기록하기 위한 포스팅입니다.
 
@@ -19,7 +13,7 @@ tags: [AVFoundation, AVKit, AVPlayer, AVAudioPlayer ]
 
 
 ## AVFoundation?
-
+***
 > AVFoundation은 다양한 Apple 플랫폼에서 사운드 및 영상 미디어의 처리, 제어, 가져오기 및 내보내기 등 광범위한 기능을 제공하는 프레임워크입니다.
 
 
@@ -30,30 +24,29 @@ tags: [AVFoundation, AVKit, AVPlayer, AVAudioPlayer ]
 
 AVFoundation gives you a rich set of features to build robust playback apps. However, because the framework sits below the user interface frameworks, it doesn’t provide a standard user interface for controlling playback. Although it’s possible to build your own custom player interface, doing so often involves a considerable amount of work and requires you to have a deep understanding of the lower-level AVFoundation interfaces. There are certainly cases where having complete control over the user interface is desirable, but often the better solution is to rely on the features provided by the AVKit framework.
 
-```
-AVFoundation은 풍부한 재생 기능을 제공하는 다양한 기능을 제공합니다. 그러나 프레임 워크는 사용자 인터페이스 프레임 워크 아래에 있기 때문에 재생 제어를위한 표준 사용자 인터페이스를 제공하지 않습니다. 자신의 커스텀 플레이어 인터페이스를 구축하는 것이 가능하지만, 그렇게하기 위해서는 상당한 작업량이 필요하며, 더 낮은 레벨의 AVFoundation 인터페이스에 대한 깊은 이해가 필요합니다. 사용자 인터페이스를 완벽하게 제어하는 것이 바람직한 경우가 있지만, 더 좋은 해결책은 AVKit 프레임 워크에서 제공하는 기능에 의존하는 것입니다.
-```
 
- <code>AVFoundation</code>은 <code>UIKit</code>아래에 있기 때문에(위에 그림 참고) 커스텀 플레이어 인터페이스를 구축하는 것이 가능하다는 것을 알 수 있다. 또한 마지막 줄에서 **더 좋은 해결책은 AVKit 프레임 워크에서 제공하는 기능에 의존하는 것입니다.** 를 볼 수 있는데 그렇다면 AVKit이란?
+AVFoundation은 풍부한 재생 기능을 제공하는 다양한 기능을 제공합니다. 그러나 프레임 워크는 사용자 인터페이스 프레임 워크 아래에 있기 때문에 재생 제어를위한 표준 사용자 인터페이스를 제공하지 않습니다. 자신의 커스텀 플레이어 인터페이스를 구축하는 것이 가능하지만, 그렇게하기 위해서는 상당한 작업량이 필요하며, 더 낮은 레벨의 AVFoundation 인터페이스에 대한 깊은 이해가 필요합니다. 사용자 인터페이스를 완벽하게 제어하는 것이 바람직한 경우가 있지만, 더 좋은 해결책은 AVKit 프레임 워크에서 제공하는 기능에 의존하는 것입니다.
+
+
+> <code>AVFoundation</code>은 <code>UIKit</code>아래에 있기 때문에(위에 그림 참고) 커스텀 플레이어 인터페이스를 구축하는 것이 가능하다는 것을 알 수 있다. 또한 마지막 줄에서 **더 좋은 해결책은 AVKit 프레임 워크에서 제공하는 기능에 의존하는 것입니다.** 를 볼 수 있는데 그렇다면 AVKit이란?
 
 
 
 ## AVKit? 
-
+***
 AVKit is a companion framework built on top of AVFoundation. AVKit makes it easy for you to provide a player interface for your app that matches the platform’s native playback experience. AVKit uses AVFoundation’s playback infrastructure to provide a player interface that automatically adapts to best match the content being played. Using AVKit, your player automatically displays subtitles and closed captions, presents navigable chapter markers, and provides controls to select alternative media options. Because AVKit is a system framework, your playback apps automatically adopt the new aesthetics and features of future operating system updates without any additional work from you.
 
 The framework is available in iOS, tvOS, and macOS. Although it shares many of its core features across all platforms, it also offers a number of platform-specific features you can use in your apps. These features are described in later sections of this guide.
 
-```
-AVKit은 AVFoundation 위에 구축 된 보조 프레임 워크입니다. AVKit을 사용하면 플랫폼의 기본 재생 환경과 일치하는 앱용 플레이어 인터페이스를 쉽게 제공 할 수 있습니다. AVKit은 AVFoundation의 재생 인프라를 사용하여 재생중인 콘텐츠와 가장 잘 일치하도록 자동으로 조정되는 플레이어 인터페이스를 제공합니다. AVKit을 사용하면 자막과 자막이 자동으로 표시되고 탐색 가능한 챕터 마커가 표시되며 대체 미디어 옵션을 선택할 수있는 컨트롤이 제공됩니다. AVKit은 시스템 프레임 워크이므로 재생 응용 프로그램은 추가 작업없이 향후 운영 체제 업데이트의 새로운 미학과 기능을 자동으로 채택합니다.
-```
 
-<code>AVKit</code>은 <code>AVFoundation</code> 의 **보조 프레임워크** 임을 알 수 있다.
+AVKit은 AVFoundation 위에 구축 된 보조 프레임 워크입니다. AVKit을 사용하면 플랫폼의 기본 재생 환경과 일치하는 앱용 플레이어 인터페이스를 쉽게 제공 할 수 있습니다. AVKit은 AVFoundation의 재생 인프라를 사용하여 재생중인 콘텐츠와 가장 잘 일치하도록 자동으로 조정되는 플레이어 인터페이스를 제공합니다. AVKit을 사용하면 자막과 자막이 자동으로 표시되고 탐색 가능한 챕터 마커가 표시되며 대체 미디어 옵션을 선택할 수있는 컨트롤이 제공됩니다. AVKit은 시스템 프레임 워크이므로 재생 응용 프로그램은 추가 작업없이 향후 운영 체제 업데이트의 새로운 미학과 기능을 자동으로 채택합니다.
+      
+> <code>AVKit</code>은 <code>AVFoundation</code> 의 **보조 프레임워크** 임을 알 수 있다.
 
 
 
 ## AVAudioPlayer?
-
+***
 > AVAudioPlayer 클래스는 파일 또는 메모리에 있는 사운드 데이터를 재생하는 기능을 제공합니다.
 
 문서에도 아주 간단명료하게 나와 있다. <code>AVAudioPlayer</code>는 네트워크에 있는 사운드 파일재생이 불가하며 이말인 즉, **파일 또는 메모리**에 있는 사운드를 재생기능을 제공한다는 것.
@@ -63,19 +56,15 @@ AVKit은 AVFoundation 위에 구축 된 보조 프레임 워크입니다. AVKit�
 
 
 ## 관련문서
-
+***
 - [AVFoundation Programming Guide](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Articles/00_Introduction.html#//apple_ref/doc/uid/TP40010188)
 - [Media Playback Programming Guide](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016757-CH1-SW1)
 - [AVPlayer](https://developer.apple.com/documentation/avfoundation/avplayer) 
 
 
-
-****
-
 ## Properties, IBOutlets
-
-<code>AVAudioPlayer</code>는 파일 또는 메모리에 있는 사운드를 재생한다는 것을 배웠다. 
-
+***
+<code>AVAudioPlayer</code>는 파일 또는 메모리에 있는 사운드를 재생한다는 것을 배웠다.       
 에셋 카탈로그에 사운드 파일을 넣어주자.
 
 ```swift
@@ -98,7 +87,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 <code>AVAudioPlayer</code>를 사용하기 위해 <code>AVFoundation</code>을 import 해주고 프로퍼티로 <code>var player: AVAudioPlayer!</code>와<code>var timer: Timer!</code>를 선언한다.인터페이스 빌더에서 버튼과 레이블, 슬라이더를 추가한 뒤 <code>IBOutlet</code>으로 연결한다.
 
 ## Method - initializePlayer
-
+***
 ```swift
 func initializePlayer() {
         guard let soundAsset: NSDataAsset = NSDataAsset(name: "sound") else {
@@ -131,7 +120,7 @@ func initializePlayer() {
 
 
 
-슬라이더를 앞서 생성하였으니 슬라이더가 나타내는 값의 범위를 지정해준다. 최대 값은 <code>player</code>객체의 **사운드의 지속시간**을 나타내는 <code>duration</code>으로 지정해주고 최소 값은 0으로 지정해준다. 또한 슬라이더의 <code>value</code>를 <code>currentTime</code>으로 초기화 해준다. **사운드가 재생중인 경우 <code>currentTime</code>은 현재 재생 위치의 사운드에 대한 오프셋입니다. 사운드가 재생되지 않으면 currentTime은 재생이 시작될 사운드의 오프셋입니다** 라고 나와있다.
+슬라이더를 앞서 생성하였으니 슬라이더가 나타내는 값의 범위를 지정해준다. 최대 값은 <code>player</code>객체의 **사운드의 지속시간**을 나타내는 <code>duration</code>으로 지정해주고 최소 값은 0으로 지정해준다. 또한 슬라이더의 <code>value</code>를 <code>currentTime</code>으로 초기화 해준다. <code>currentTime</code>은 **사운드가 재생중인 경우 <code>currentTime</code>은 현재 재생 위치의 사운드에 대한 오프셋입니다. 사운드가 재생되지 않으면 currentTime은 재생이 시작될 사운드의 오프셋입니다** 라고 나와있다.
 
 
 
@@ -140,7 +129,7 @@ func initializePlayer() {
 
 
 ## Method - updateTimeLabelText 
-
+***
 ```swift
 func updateTimeLabelText(time: TimeInterval) {
         let minute: Int = Int(time / 60)
@@ -179,16 +168,14 @@ time: 0.0557369614512472, second: 0, milisecond: 5
 
 
 ## Method - makeAndFireTimer, invalidateTimer
-
+***
 ```swift
 func makeAndFireTimer() {
-        // unowned 값이 있음을 가정하고 사용, 밀리세컨드 단위
         self.timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { [unowned self] (timer: Timer) in
             if self.progressSlider.isTracking { return }
             self.updateTimeLabelText(time: self.player.currentTime)
             self.progressSlider.value = Float(self.player.currentTime)
         })
-        // fire를 통해 timer 시작, invalidate 종료
         self.timer.fire()
 }
 func invalidateTimer() {
@@ -199,7 +186,7 @@ func invalidateTimer() {
 
 
 
-프로젝트의 기준에 따라 0.01단위로 <code>withTimeInterval</code>로 지정하고, 반복적으로 하기위해 <code>repeats<code>를 <code>true</code>로 셋팅한다. <code>true</code>인 경우 타이머는 <code>invalidate</code> 될 때까지 스스로 일정을 반복한다.
+프로젝트의 기준에 따라 0.01단위로 <code>withTimeInterval</code>로 지정하고, 반복적으로 하기위해 <code>repeats</code>를 <code>true</code>로 셋팅한다. <code>true</code>인 경우 타이머는 <code>invalidate</code> 될 때까지 스스로 일정을 반복한다.
 
 
 
@@ -210,10 +197,9 @@ func invalidateTimer() {
 <code>timer</code>를 시작하기위해 <code>fire</code>, 종료는 <code>invalidate</code>로 종료한다.
 
 ## Method - touchUpPlayPauseButton
-
+***
 ```swift
 @IBAction func touchUpPlayPauseButton(_ sender: UIButton) {
-        //버튼이 눌렸을 때 직접 값을 셋팅, 초기값은 항상 false
         sender.isSelected = !sender.isSelected
         
         if sender.isSelected {
@@ -235,7 +221,7 @@ func invalidateTimer() {
 
 
 ## Method - sliderValueChanged
-
+***
 ``` swift
 @IBAction func sliderValueChanged(_ sender: UISlider) {
         self.updateTimeLabelText(time: TimeInterval(sender.value))
@@ -257,10 +243,9 @@ func invalidateTimer() {
 
 
 ## Method - audioPlayerDidFinishPlaying
-
+***
 ```swift
 func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        //음악 재생이 끝났을 때 버튼이미지, 슬라이더, 시간을 다시 되돌림
         self.playPauseButton.isSelected = false
         self.progressSlider.value = 0
         self.updateTimeLabelText(time: 0)

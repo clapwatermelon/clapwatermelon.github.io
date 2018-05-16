@@ -257,7 +257,5 @@ func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Boo
 
 
 
-> 처음 코드를 보지않고 무작정 만들어 놓고 너무 쉽다고 생각했던 나에게 망치 한대를..이렇게 <code>AVAudioPlayer</code>에 새로이 알게되는 내용과 <code>AVAudioPlayer</code>에 대해 공부하면서  <code>AVKit</code>, <code>AVPlayer</code>도 간단하게나마 이해할 수 있었다. 이제 스스로 다룰 수 있는 능력을 기르자!
-
-
+> 처음 코드를 보지않고 무작정 만들어 놓고 너무 쉽다고 생각했던 나에게 망치 한대를..이렇게 <code>AVAudioPlayer</code>에 새로이 알게되는 내용과 <code>AVAudioPlayer</code>에 대해 공부하면서  <code>AVKit</code>, <code>AVPlayer</code>도 간단하게나마 이해할 수 있었다.
 

@@ -144,13 +144,13 @@ func updateTimeLabelText(time: TimeInterval) {
 
 
 
-100 % 4 를 한 값은 25로 나오지만 100.0 % 4 를 하면 오류가 나는데 이것을 <code>truncatingRemainder</code>를 사용하여 가능하게한다.
+10 % 7 를 한 값은 3으로 나오지만 10.0 % 7 을 하면 오류가 나는데 이것을 <code>truncatingRemainder</code>를 사용하여 가능하게한다.
 
 
 
 위의 코드에서 처음에 무슨 역할을 하는 건지 몰라서 출력을 하나하나 해보면서 어떤 역할을 하는지 알아보았다.
 
-<code>time</code>, <code>seond</code>, <code>millisecond</code>을 출력시 
+<code>time</code>, <code>seond</code>, <code>millisecond</code>을 출력시 아래와 같다.
 
 ```swift
 time: 0.0, second: 0, milisecond: 0

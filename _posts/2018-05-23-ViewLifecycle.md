@@ -32,3 +32,9 @@ tags: [view Lifecycle]
 
 여기서 중요한 것은 위 메서드들을 사용할 때 override 키워드와 super를 호출해주는 것을 명심하자.
 
+
+
+관련 문서: [UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller)
+
+
+
